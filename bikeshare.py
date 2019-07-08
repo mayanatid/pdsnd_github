@@ -5,8 +5,18 @@ import numpy as np
 # This is the code for the bikeshare project
 
 CITY_DATA = { 'chicago': 'chicago.csv',
+              'chi': 'chicago.csv',
               'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+              'nyc': 'new_york_city.csv',
+              'washington': 'washington.csv',
+              'was': 'washington.csv' }
+
+city_names = {'chicago': 'chicago',
+              'chi': 'chicago',
+              'new york city': 'new york city',
+              'nyc': 'new york city',
+              'washington': 'washington.csv',
+              'was': 'washington' }             
 
 month_options = [	'all', 'january', 'fubruary', 'february', 
 					'march', 'april', 'may', 'june']
@@ -36,7 +46,7 @@ def get_filters():
     while True:
         user_city = input("Please select a city from the following: chicago, new york city, washington: ").lower()
         if user_city in CITY_DATA.keys():
-            print("You have picked {}".format(user_city))
+            print("You have picked {}".format(city_names[user_city]))
             break
         else:
             print("{} is an invalid city\n".format(user_city))
