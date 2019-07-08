@@ -18,3 +18,6 @@ Udactiy
 
 ### Additional note
 This is an additional note to test git
+
+### Forgot to do this earlier
+I only added one commit, so doing another one here
