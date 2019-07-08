@@ -15,3 +15,6 @@ washington.csv
 
 ### Credits
 Udactiy
+
+### Additional note
+This is an additional note to test git
