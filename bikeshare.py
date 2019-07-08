@@ -32,6 +32,15 @@ month_abbreviations = { '*': "all",
 day_options = [	'all', 'monday', 'tuesday', 'wednesday', 
 				'thursday', 'friday', 'saturday', 'sunday']
 
+day_abbreviations = { '*': "all", 
+						'mon': 'monday',
+						'tues': 'tuesday',
+						'weds': 'wednesday',
+						'thurs': 'thursday',
+						'fri': 'friday',
+						'sat': 'saturday',
+						'sun': 'sunday'}
+
 def create_counts_dict(df_column):
 	# Used to create a dictionary out df.value_counts()
 	# Input: a columns from a pd dataframe
@@ -78,6 +87,10 @@ def get_filters():
 	while True:
 		user_day = input("Please select a day from (all, monday, tuesday, ... sunday): ")
 		if user_day in day_options:
+			print("You picked {}".format(user_day))
+			break
+		elif user_day in day_abbreviations.keys():
+			user_day = day_abbreviations[user_day]
 			print("You picked {}".format(user_day))
 			break
 		else:
